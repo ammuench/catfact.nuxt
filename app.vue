@@ -4,20 +4,20 @@ const metaImage = `https://catfact.page/img/meta-${Math.floor(
 )}.jpg`;
 
 useHead({
-  title: "😺 catfact.page 😺",
+  title: "catfact😺page",
   meta: [
     { name: "description", content: "Click this link, get a cat fact!" },
     { name: "author", content: "Alex Muench (https://alexmuen.ch)" },
 
     { name: "og:type", content: "website" },
     { name: "og:url", content: "https://catfact.page/" },
-    { name: "og:title", content: "😺 catfact.page 😺" },
+    { name: "og:title", content: "catfact😺page" },
     { name: "og:description", content: "Click this link, get a cat fact!" },
     { name: "og:image", content: metaImage },
 
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:url", content: "https://catfact.page/" },
-    { name: "twitter:title", content: "😺 catfact.page 😺" },
+    { name: "twitter:title", content: "catfact😺page" },
     {
       name: "twitter:description",
       content: "Click this link, get a cat fact!",
