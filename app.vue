@@ -44,7 +44,7 @@ const bgToUse =
 </script>
 
 <template>
-  <div class="o_page" :style="{ background: possibleBackgrounds[5] }">
+  <div class="o_page" :style="{ background: bgToUse }">
     <h1 class="c_pageTitle">
       catfact<span class="c_pageTitle__tinycat">😺</span>page
     </h1>
