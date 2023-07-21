@@ -27,17 +27,18 @@ useHead({
 });
 
 const catFactResponse = await useFetch("/api/catfact");
+console.log(catFactResponse);
 const catFact = catFactResponse?.data?.value?.fact;
 
 const possibleBackgrounds = [
-  'url("/img/cat-bg-1.jpeg") no-repeat 35% center fixed;',
-  'url("/img/cat-bg-2.webp") no-repeat 35% center fixed;',
-  'url("/img/cat-bg-3.webp") no-repeat center center fixed ;',
-  'url("/img/cat-bg-4.webp") no-repeat 65% center fixed;',
-  'url("/img/cat-bg-5.webp") no-repeat right center fixed;',
-  'url("/img/cat-bg-6.webp") no-repeat 35% center fixed;',
-  'url("/img/cat-bg-7.webp") no-repeat 90% center fixed;',
-  'url("/img/cat-bg-8.webp") no-repeat left center fixed;',
+  'url("/img/cat-bg-1.jpeg") no-repeat 35% center fixed',
+  'url("/img/cat-bg-2.webp") no-repeat 35% center fixed',
+  'url("/img/cat-bg-3.webp") no-repeat center center fixed',
+  'url("/img/cat-bg-4.webp") no-repeat 65% center fixed',
+  'url("/img/cat-bg-5.webp") no-repeat right center fixed',
+  'url("/img/cat-bg-6.webp") no-repeat 35% center fixed',
+  'url("/img/cat-bg-7.webp") no-repeat 90% center fixed',
+  'url("/img/cat-bg-8.webp") no-repeat left center fixed',
 ];
 const bgToUse =
   possibleBackgrounds[Math.floor(Math.random() * possibleBackgrounds.length)];
@@ -72,7 +73,8 @@ body {
   overflow: hidden;
 
   display: grid;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: auto 1fr / 1fr;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 
@@ -86,6 +88,7 @@ body {
   font-family: "Baloo Bhaina", sans-serif;
   font-size: 6rem;
   text-align: center;
+  margin: 0;
 
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000;
@@ -110,6 +113,7 @@ body {
   padding: 1rem;
   backdrop-filter: blur(2px);
   border-radius: 1rem;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -126,7 +130,7 @@ body {
   }
 
   #c_catFact {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 }
